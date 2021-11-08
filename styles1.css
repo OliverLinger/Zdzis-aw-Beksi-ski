@@ -1,0 +1,130 @@
+@viewport{
+    width: device-width;
+}
+:root{
+    --nav: white;
+    --boxes: #d1cebf;
+}
+header{
+    text-align: center;
+    font-family: Georgia,'Times New Roman', 'Optima', serif;
+    text-shadow: 2px 2px grey;
+}
+nav {
+    display: flex;
+    padding: 0% 0% 2% 0%;
+    text-align: center;
+    color: white;
+    background-color:var(--nav);
+}
+nav a{
+    display: flex;
+    flex: wrap;
+    flex-direction: row;
+    margin: 2%;
+    width: 100%;
+    color:white;
+    background-color: #900c3f;
+    padding: 1% 1% 1% 1%;
+    border-radius: 50%;
+}
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url("images/mushrooms.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#his_life{
+    display: block;
+    width: 80%;
+    padding: 0% 2%;
+    text-align: center;
+    background-color: var(--boxes);
+    background-image: url("images/Zdzislaw_Beksinski_photo.jpg");
+    background-repeat: no-repeat;
+}
+#his_life a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 1.9em;
+    color: #0f92c5;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 50vh;
+    width: 30%;
+    padding: 1%;
+    margin: 2%;
+    background-color:var(--boxes);
+}
+section h2 a{
+    animation-name: color;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    transition-timing-function: linear;
+}
+section:hover{
+    opacity: 1;
+    transition-duration: 1s;
+}
+@media (hover:hover){
+    section{
+        opacity: 0.7;
+    }
+}
+@media (hover:hover){
+    nav a{
+        display: none;
+    }
+}
+@media (hover:none){
+    nav a{
+        display: inline;
+    }
+}
+@media (hover:hover){
+    nav:hover a{
+        display: inline;
+        transition-duration: 2s;
+    }
+}
+main section+section{
+    background-color:var(--boxes);
+    border-radius: 20%;
+    border-width: 2%;
+}
+#photography img{
+    max-width: 100%;
+}
+#fantastic img{
+    max-width: 100%;
+}
+#later_work img{
+    max-width: 100%;
+    max-height: 60%;
+}
+@media (max-width: 400px){
+    section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 50vh;
+    width: 80%;
+    padding: 1%;
+    margin: 2%;
+    background-color:var(--boxes);
+    }
+}
+@keyframes color {
+    from { background-color: #88848b;}
+    to { background-color: #d1cebf}
+}

@@ -1,0 +1,203 @@
+@viewport{
+    width: device-width;
+}
+:root{
+    --border: #003153;
+    --table: white;
+    --paragraph:#d3d1c9;
+    --main: #98c1d0;
+    --footer: white;
+}
+header{
+    text-align: center;
+    font-family: Georgia,'Times New Roman', 'Optima', serif;
+    text-shadow: 2px 2px grey;
+}
+nav {
+display: flex;
+padding: 0% 0% 2% 0%;
+text-align: center;
+color: white;
+}
+nav a{
+display: flex;
+flex-wrap: wrap;
+margin: 2%;
+width: 100%;
+color:white;
+background-color:#900c3f;
+padding: 1% 1% 1% 1%;
+border-radius: 50%;
+}
+main{
+    width: 100%;
+    animation-name: image1;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition-timing-function: ease-in;
+    transition-delay: 2s;
+}
+#later_main{
+    width: 100%;
+    animation-name: image2;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition-timing-function: ease-in;
+    transition-delay: 2s;
+}
+#main_life{
+    width: 100%;
+    animation-name: image3;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition-timing-function: ease-in;
+    transition-delay: 2s;
+}
+img{
+    display: block;
+    width: 30%;
+    border: 2px solid black;
+    margin: 1%;
+}
+table { 
+    border: 2px solid var(--border);
+    border-collapse: collapse;
+    margin: 2%;
+    width: 90%;
+}
+table th{
+    border: 2px solid var(--border) ;
+}
+table td{
+    border: 2px solid var(--border);
+}
+section{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 100%;
+    background-color: var(--paragraph);
+    padding: 6%;
+    border: 2px var(--border);
+    border-radius: 30%;
+}
+section p{
+    font-size: 1.15em;
+    margin: 6%;
+}
+@media (hover:hover){
+    nav a{
+        display: none;
+    }
+}
+@media (hover:none){
+    nav a{
+        display: inline;
+    }
+}
+@media (hover:hover){
+    nav:hover a{
+        display: inline;
+    }
+}
+@media (hover:hover){
+    table:hover tr:nth-child(even){
+        background-color: #b1bd94;
+        color: var(--table);
+        transition-delay: 0.2s;
+    }
+}
+@media (hover:hover){
+    table:hover th:nth-child(even){
+        background-color: #615756;
+        color:var(--table);
+        transition-delay: 0.4s;
+    }
+}
+@media (hover:none){
+    tr:nth-child(even){
+        background-color: #b1bd94;
+        transition-delay: 0.2s;
+    }
+}
+@media (hover:none){
+    th:nth-child(even){
+        background-color: #615756;
+        color: var(--table);
+    }
+}
+/*keyframes from w3 schools */
+@keyframes image1 {
+    from { background-image: url(images/black_dog.jpg);}
+    to { background-image: url(images/soldier.jpg);}
+}
+@keyframes image2 {
+    from { background-image: url(images/smiles.jpg);}
+    to { background-image: url(images/soldier.jpg);}
+}
+@keyframes image3 {
+    from { background-image: url(images/Crawler.jpg);}
+    to { background-image: url(images/soldier.jpg);}
+}
+
+@media (hover:hover){
+    section{
+        opacity: 0.7;
+    }
+}
+section:hover{
+    opacity: 1;
+}
+@media (max-width: 800px){
+    section {
+        position: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
+footer{
+    background-color: var(--footer);
+}
+
+@media (max-width: 500px){
+    main{
+    background-color: #b9c07a;
+    background-image: none;
+    animation-name: none;
+    animation-duration: 0s;
+    transition-delay: 0s;
+    }
+}
+@media (max-width: 500px){
+    #later_main{
+    background-color: #b9c07a;
+    background-image: none;
+    animation-name: none;
+    animation-duration: 0s;
+    transition-delay: 0s;
+    }
+}
+@media (max-width: 500px){
+    #later_main{
+    background-color: #b9c07a;
+    background-image: none;
+    animation-name: none;
+    animation-duration: 0s;
+    transition-delay: 0s;
+    }
+}
+@media (max-width: 500px){
+    #main_life{
+    background-color: #b9c07a;
+    background-image: none;
+    animation-name: none;
+    animation-duration: 0s;
+    transition-delay: 0s;
+    }
+}
